@@ -13,12 +13,14 @@ export function isIphoneX() {
             checkDemension(896) ||
             checkDemension(926) ||
             checkDemension(852) ||
-            checkDemension(932))
+            checkDemension(874) ||
+            checkDemension(932) ||
+            checkDemension(956))
     )
 }
 
 export function isDynamicIsland() {
-    return Platform.OS === "ios" && !Platform.isPad && !Platform.isTVOS && _isStatusBarHeight59()
+    return Platform.OS === "ios" && !Platform.isPad && !Platform.isTVOS && (_isStatusBarHeight59() || _isStatusBarHeight62())
 }
 
 const checkDemension = (size) => {
@@ -62,9 +64,14 @@ const _isStatusBarHeight48 = () => {
 const _isStatusBarHeight50 = () => {
     return checkDimensions(360, 780)
 }
-// 14 Pro, 14 Pro Max
+// 14 Pro, 14 Pro Max, 15, 15 Plus, 15 Pro, 15 Pro Max, 16, 16 Plus
 const _isStatusBarHeight59 = () => {
     return checkDimensions(393, 852) || checkDimensions(430, 932)
+}
+
+// 16 Pro, 16 Pro Max
+const _isStatusBarHeight62 = () => {
+    return checkDimensions(402, 874) || checkDimensions(440, 956);
 }
 
 const _getIphoneStatusBarHeight = () => {
@@ -80,6 +87,9 @@ const _getIphoneStatusBarHeight = () => {
         }
         if (_isStatusBarHeight59()) {
             return 59
+        }
+        if(_isStatusBarHeight62()) {
+            return 62;
         }
         return 44
     }

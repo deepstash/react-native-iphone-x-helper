@@ -79,7 +79,7 @@ if (isIphoneX()) {
 | 47 | iPhone12, 12 Pro, 12 Pro Max, 13, 13 Pro, 13 Pro Max, 14, 14 Plus |
 | 48(Not Supported Now) | iPhone11, Xr |
 | 50 | iPhone12 Mini, 13 Mini |
-| 59 | iPhone14 Pro、14 Pro Max |
+| 59 | iPhone14 Pro、14 Pro Max, 15, 15 Plus, 15 Pro, 15 Pro Max |
 
 
 #### Example ####

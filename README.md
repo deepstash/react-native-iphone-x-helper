@@ -130,7 +130,7 @@ export default StyleSheet.create({
 
 ### isDynamicIsland ###
 
-**returns** the device whether contains the dynamic island. Specifically, 14 Pro 和 14 Pro Max by now
+**returns** the device whether contains the dynamic island (iPhone 14 Pro and 14 Pro Max, all iPhone 15 and all iPhone 16).
 
 #### Example ####
 ```js
